@@ -36,7 +36,7 @@ public final class TestConfig {
     
     // ========== Test Configuration ==========
     public static final boolean TAKE_SCREENSHOT_ON_FAILURE = true;
-    public static final boolean RECORD_VIDEO = false;
+    public static final boolean RECORD_VIDEO = true;
     
     /**
      * Build complete URL by concatenating base URL with path

@@ -147,6 +147,7 @@ public class ProductPage extends BasePage {
      */
     public ProductPage clickAddToCart() {
         click(addToCartButton);
+        page.waitForTimeout(2000);
         return this;
     }
     
