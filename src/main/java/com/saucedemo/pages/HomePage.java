@@ -16,6 +16,7 @@ public class HomePage extends BasePage {
     private final String navLinks = "header nav a";
     
     private final String productLink = "#page-content a[href*='/products/']";
+    private final String firstProduct = "#product-1";
     
     /**
      * Constructor
@@ -94,7 +95,7 @@ public class HomePage extends BasePage {
      */
     public void clickFirstProduct() {
         waitForElementVisible(productLink);
-        page.locator(productLink).first().click();
+        page.locator(firstProduct).click();
         waitForPageLoad();
     }
     

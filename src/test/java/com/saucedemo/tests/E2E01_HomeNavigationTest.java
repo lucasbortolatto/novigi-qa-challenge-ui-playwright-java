@@ -40,6 +40,8 @@ public class E2E01_HomeNavigationTest extends BaseTest {
         // Validate main elements
         assertTrue(homePage.isLogoVisible(), 
             "Logo must be visible");
+        assertTrue(homePage.isMenuVisible(), 
+            "Navigation menu must be visible");
         assertTrue(homePage.isCartIconVisible(), 
             "Cart must be visible");
         assertTrue(homePage.areProductsVisible(), 
