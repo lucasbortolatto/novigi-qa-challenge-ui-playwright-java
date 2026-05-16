@@ -24,6 +24,8 @@ public class CartPage extends BasePage {
     // Actions
     private final String removeButton = "#drawer .removeLine";
     private final String checkoutButton = "#drawer .actions input";
+    private final String checkoutButtonCartPage = "#checkout";
+
     
     // Cart state
     private final String emptyCartMessage = "#drawer .empty";
@@ -226,6 +228,21 @@ public class CartPage extends BasePage {
     public void clickCheckout() {
         waitForElementVisible(checkoutButton);
         click(checkoutButton);
+        waitForPageLoad();
+    }
+    
+    /**
+     * Click checkout button on /cart page to go to final checkout
+     * 
+     * This is the second checkout button that appears on the cart page
+     * after clicking checkout in the drawer
+     */
+    public void clickCheckoutOnCartPage() {
+        // Wait to be on cart page
+        page.waitForTimeout(1000);
+        
+        waitForElementVisible(checkoutButtonCartPage);
+        click(checkoutButtonCartPage);
         waitForPageLoad();
     }
     
