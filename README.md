@@ -43,9 +43,24 @@ mvn allure:serve
 ## 📁 Project Structure
 
 src/
-├── main/java/          # Framework code (Page Objects, Utils, Config)
-└── test/java/          # E2E tests
-
+├── main/java/com/saucedemo/
+│   ├── base/BasePage.java                 # Common page methods
+│   ├── config/
+│   │   ├── PlaywrightFactory.java         # Browser management
+│   │   └── TestConfig.java                # Configuration
+│   └── pages/
+│       ├── HomePage.java                  # Home page objects
+│       ├── ProductPage.java               # Product page objects
+│       ├── CartPage.java                  # Cart drawer objects
+│       └── CheckoutPage.java              # Checkout form objects
+│
+└── test/java/com/saucedemo/
+├── base/BaseTest.java                 # Test setup/teardown
+└── tests/
+├── E2E01_HomePageTest.java        # Home page tests (4 scenarios)
+├── E2E02_ProductPageTest.java     # Product tests (4 scenarios)
+├── E2E03_CartManagementTest.java  # Cart tests (4 scenarios)
+└── E2E04_CheckoutFlowTest.java    # Checkout tests (4 scenarios)
 ## ✅ Status
 
 🚧 In development
